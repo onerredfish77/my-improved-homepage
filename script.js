@@ -66,33 +66,37 @@ document.addEventListener('DOMContentLoaded', function() {
             maintainAspectRatio: false,
             layout: {
                 padding: {
-                    top: 10,
-                    right: 15,
-                    bottom: 10,
-                    left: 10
+                    top: 20,
+                    right: 20,
+                    bottom: 20,
+                    left: 20
                 }
             },
+            aspectRatio: 1.5,
             plugins: {
                 title: {
                     display: true,
                     text: "Simpson Family Catchphrases Per Season",
                     font: {
-                        size: window.innerWidth < 480 ? 14 : 16,
+                        size: window.innerWidth < 480 ? 16 : 18,
                         weight: 'bold',
                         family: "'Roboto', sans-serif"
                     },
-                    padding: window.innerWidth < 480 ? 10 : 20
+                    padding: {
+                        top: 10,
+                        bottom: 20
+                    }
                 },
                 legend: {
                     display: true,
                     position: 'top',
                     align: 'center',
                     labels: {
-                        boxWidth: window.innerWidth < 480 ? 30 : 40,
+                        boxWidth: window.innerWidth < 480 ? 35 : 40,
                         usePointStyle: true,
-                        padding: window.innerWidth < 480 ? 10 : 20,
+                        padding: 15,
                         font: {
-                            size: window.innerWidth < 480 ? 10 : 12,
+                            size: window.innerWidth < 480 ? 12 : 14,
                             family: "'Roboto', sans-serif"
                         }
                     }

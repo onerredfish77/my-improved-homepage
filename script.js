@@ -64,24 +64,36 @@ document.addEventListener('DOMContentLoaded', function() {
         options: {
             responsive: true,
             maintainAspectRatio: false,
+            layout: {
+                padding: {
+                    top: 10,
+                    right: 15,
+                    bottom: 10,
+                    left: 10
+                }
+            },
             plugins: {
                 title: {
                     display: true,
                     text: "Simpson Family Catchphrases Per Season",
                     font: {
-                        size: 16,
-                        weight: 'bold'
+                        size: window.innerWidth < 480 ? 14 : 16,
+                        weight: 'bold',
+                        family: "'Roboto', sans-serif"
                     },
-                    padding: 20
+                    padding: window.innerWidth < 480 ? 10 : 20
                 },
                 legend: {
                     display: true,
                     position: 'top',
+                    align: 'center',
                     labels: {
+                        boxWidth: window.innerWidth < 480 ? 30 : 40,
                         usePointStyle: true,
-                        padding: 20,
+                        padding: window.innerWidth < 480 ? 10 : 20,
                         font: {
-                            size: 12
+                            size: window.innerWidth < 480 ? 10 : 12,
+                            family: "'Roboto', sans-serif"
                         }
                     }
                 }
@@ -92,21 +104,37 @@ document.addEventListener('DOMContentLoaded', function() {
                         display: true,
                         text: 'Season Number',
                         font: {
-                            weight: 'bold'
+                            size: window.innerWidth < 480 ? 10 : 12,
+                            weight: 'bold',
+                            family: "'Roboto', sans-serif"
                         }
                     },
                     min: 0,
-                    max: 16
+                    max: 16,
+                    ticks: {
+                        font: {
+                            size: window.innerWidth < 480 ? 10 : 12,
+                            family: "'Roboto', sans-serif"
+                        }
+                    }
                 },
                 y: {
                     title: {
                         display: true,
                         text: 'Number of Catchphrases',
                         font: {
-                            weight: 'bold'
+                            size: window.innerWidth < 480 ? 10 : 12,
+                            weight: 'bold',
+                            family: "'Roboto', sans-serif"
                         }
                     },
-                    min: 0
+                    min: 0,
+                    ticks: {
+                        font: {
+                            size: window.innerWidth < 480 ? 10 : 12,
+                            family: "'Roboto', sans-serif"
+                        }
+                    }
                 }
             }
         }
